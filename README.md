@@ -1,5 +1,2 @@
 # A
-ayyy less roll some dice
-
-
-roll. dice. that's it.
+learning to code be like
