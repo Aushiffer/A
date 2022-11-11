@@ -397,7 +397,7 @@ public class DiceRoller {
     } catch(InputMismatchException inputMs_exc) {
 
         System.out.println();
-        System.out.println("FATAL ERROR: Input mismatch");
+        System.out.println("FATAL ERROR: input mismatch");
         System.out.println("Shutting down...");
 
     }
