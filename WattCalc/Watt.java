@@ -91,7 +91,7 @@ public class Watt {
         } catch(InputMismatchException inputExc) {
 
             System.out.println();
-            System.out.println("FATAL ERROR: Failed input");
+            System.out.println("FATAL ERROR: input mismatch exception");
             System.out.println("SHUTTING DOWN...");
 
         } finally {
