@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class DiceRoller {
 
-    static Random rng = new Random();
-    static Scanner sc = new Scanner(System.in);
+    Random rng = new Random();
+    Scanner sc = new Scanner(System.in);
 
-    static int[] numStorage() {
+    int[] numStorage() {
         
         int[] store = new int[10];
 
@@ -16,7 +16,7 @@ public class DiceRoller {
 
     }
 
-    static int sum(int[] a) {
+    int sum(int[] a) {
 
         int n = 0;
 
@@ -78,7 +78,11 @@ public class DiceRoller {
             
         for(int i = 0; i < storeDice.length; i++) {
 
-            System.out.print(storeDice[i]+" ");
+            if(storeDice[i] != 0) {
+
+                System.out.print(storeDice[i]+" ");
+
+            }
 
         }
 
