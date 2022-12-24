@@ -1,56 +1,47 @@
 package RandomNumberGenerator;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class RNG {
+
+    Random rng = new Random();
+    Scanner sc = new Scanner(System.in);
+
+    int createRNG(int a, int b) {
+
+        return rng.nextInt(a, b);
+
+    }
+
+    void runRNG() {
+
+        System.out.println("Origin: ");
+        int x = sc.nextInt();
+        System.out.println();
+
+        System.out.println("Bound (must be greater than the origin): ");
+        int y = sc.nextInt();
+        System.out.println();
+
+        while(y <= x) {
+
+            System.out.println("Invalid input. The bound value can't be greater than the origin value.");
+            y = sc.nextInt();
+            System.out.println();
+
+        }
+
+        System.out.println("Your randomly generated number between "+x+" and "+y+" is: "+createRNG(x, y));
+
+    }
+
     public static void main(String[] args) {
 
-        Scanner userInput = new Scanner(System.in);
-        Random rand = new Random();
-        
-        int userMin, userMax;
-        int rng;
+        RNG RNG = new RNG();
 
-        System.out.println("RNG do Caio MUITO FODAAAAA!!");
-        System.out.println("Especifique o valor mínimo (deve ser maior ou igual a 0).");
-        userMin = userInput.nextInt();
-        
-        while(true) {
-            
-            if(userMin>=0) {
-                
-                break;
+        RNG.runRNG();
 
-            } else {
-                
-                System.out.println("O número mínimo inserido deve ser maior ou igual a 0.");
-                userMin = userInput.nextInt();
-                
-            }
-        }
-        
-        System.out.println("E agora o valor máximo (deve ser maior que o número mínimo). ");
-        userMax = userInput.nextInt();
-        
-        while(true) {
-            
-            if(userMax>userMin) {
-                
-                break;
-
-            } else if(userMax<userMin) {
-                
-                System.out.println("O número máximo inserido deve ser maior que o mínimo inserido.");
-                userMax = userInput.nextInt();
-
-            }
-        }
-        
-        rng = rand.nextInt(userMin, userMax);
-        
-        System.out.println("Seu número é... "+rng);
-        userInput.close();
-    
     }
+
 }
